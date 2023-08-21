@@ -1,0 +1,14 @@
+{
+  "name": "My Codespace with MySQL",
+  "dockerFile": "Dockerfile",
+  "extensions": ["dbaeumer.vscode-eslint"],
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash"
+  },
+  "forwardPorts": [3306],
+  "postCreateCommand": "service mysql start",
+  "overrideCommand": false,
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspaces/${containerWorkspaceFolder},type=bind,consistency=cached",
+  "workspaceFolder": "/workspaces",
+  "remoteUser": "codespace"
+}
